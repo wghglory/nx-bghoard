@@ -26,6 +26,9 @@
       ],
       "@nx-bghoard/review/feature-list": [
         "libs/review/feature-list/src/index.ts"
+      ],
+      "@nx-bghoard/review/feature-details": [
+        "libs/review/feature-details/src/index.ts"
       ]
     }
   },

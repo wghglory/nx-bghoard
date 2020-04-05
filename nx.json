@@ -43,6 +43,9 @@
     },
     "review-feature-list": {
       "tags": []
+    },
+    "review-feature-details": {
+      "tags": []
     }
   }
 }

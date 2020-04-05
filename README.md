@@ -18,6 +18,7 @@ nx g @nrwl/react:lib util-formatters --directory=review
 nx g @nrwl/react:lib data-access-games --directory=review
 
 nx g @nrwl/react:lib feature-list --directory=review
+nx g @nrwl/react:lib feature-details --directory=review
 ```
 
 ## Adding capabilities to your workspace
