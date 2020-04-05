@@ -34,6 +34,9 @@
     },
     "review-ui-tile": {
       "tags": []
+    },
+    "review-util-formatters": {
+      "tags": []
     }
   }
 }

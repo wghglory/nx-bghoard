@@ -17,7 +17,10 @@
     "baseUrl": ".",
     "paths": {
       "@nx-bghoard/api-interfaces": ["libs/api-interfaces/src/index.ts"],
-      "@nx-bghoard/review/ui-tile": ["libs/review/ui-tile/src/index.ts"]
+      "@nx-bghoard/review/ui-tile": ["libs/review/ui-tile/src/index.ts"],
+      "@nx-bghoard/review/util-formatters": [
+        "libs/review/util-formatters/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

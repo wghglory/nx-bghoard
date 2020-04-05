@@ -14,6 +14,7 @@ npx create-nx-workspace nx-bghoard
 
 ```bash
 nx g @nrwl/react:lib ui-tile --directory=review  # create ui-tile lib under review folder
+nx g @nrwl/react:lib util-formatters --directory=review
 ```
 
 ## Adding capabilities to your workspace
