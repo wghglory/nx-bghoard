@@ -1,20 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Game } from '@nx-bghoard/api-interfaces';
 
-import styled from '@emotion/styled';
+export function useGames() {
+  const [games, setGame] = useState<Game[]>([]);
 
-/* eslint-disable-next-line */
-export interface ReviewDataAccessGamesProps {}
+  useEffect(() => {
+    fetch('/api/game')
+      .then(r => r.json())
+      .then(setGame);
+  }, []);
 
-const StyledReviewDataAccessGames = styled.div`
-  color: pink;
-`;
-
-export const ReviewDataAccessGames = (props: ReviewDataAccessGamesProps) => {
-  return (
-    <StyledReviewDataAccessGames>
-      <h1>Welcome to review-data-access-games component!</h1>
-    </StyledReviewDataAccessGames>
-  );
-};
-
-export default ReviewDataAccessGames;
+  return games;
+}

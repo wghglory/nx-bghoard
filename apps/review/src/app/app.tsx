@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import {
   TileGrid,
@@ -10,21 +10,15 @@ import {
   TileRightCorner
 } from '@nx-bghoard/review/ui-tile';
 
-import { Game } from '@nx-bghoard/api-interfaces';
-
 import {
   currencyFormat,
   ratingFormat
 } from '@nx-bghoard/review/util-formatters';
 
-export const App = () => {
-  const [games, setGames] = useState<Game[]>([]);
+import { useGames } from '@nx-bghoard/review/data-access-games';
 
-  useEffect(() => {
-    fetch('/api/game')
-      .then(r => r.json())
-      .then(setGames);
-  }, []);
+export const App = () => {
+  const games = useGames();
 
   return (
     <>
