@@ -279,6 +279,34 @@
           }
         }
       }
+    },
+    "review-feature-list": {
+      "root": "libs/review/feature-list",
+      "sourceRoot": "libs/review/feature-list/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/review/feature-list/.eslintrc",
+            "tsConfig": [
+              "libs/review/feature-list/tsconfig.lib.json",
+              "libs/review/feature-list/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/review/feature-list/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/review/feature-list/jest.config.js",
+            "tsConfig": "libs/review/feature-list/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

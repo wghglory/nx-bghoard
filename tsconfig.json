@@ -23,6 +23,9 @@
       ],
       "@nx-bghoard/review/data-access-games": [
         "libs/review/data-access-games/src/index.ts"
+      ],
+      "@nx-bghoard/review/feature-list": [
+        "libs/review/feature-list/src/index.ts"
       ]
     }
   },
