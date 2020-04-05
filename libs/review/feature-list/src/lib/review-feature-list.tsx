@@ -1,19 +1,51 @@
 import React from 'react';
 
-import styled from '@emotion/styled';
+import {
+  TileGrid,
+  Tile,
+  ImageWrapper,
+  Image,
+  TileTitle,
+  TileLeftCorner,
+  TileRightCorner
+} from '@nx-bghoard/review/ui-tile';
+
+import {
+  currencyFormat,
+  ratingFormat
+} from '@nx-bghoard/review/util-formatters';
+
+import { useGames } from '@nx-bghoard/review/data-access-games';
 
 /* eslint-disable-next-line */
 export interface ReviewFeatureListProps {}
 
-const StyledReviewFeatureList = styled.div`
-  color: pink;
-`;
-
 export const ReviewFeatureList = (props: ReviewFeatureListProps) => {
+  const games = useGames();
+
   return (
-    <StyledReviewFeatureList>
-      <h1>Welcome to review-feature-list component!</h1>
-    </StyledReviewFeatureList>
+    <TileGrid>
+      {games.map(game => {
+        return (
+          <a
+            href={'/' + game.id}
+            key={game.id}
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            <Tile>
+              {game.image && (
+                <ImageWrapper>
+                  <Image src={game.image} />
+                </ImageWrapper>
+              )}
+              <TileTitle>{game.name}</TileTitle>
+              <TileLeftCorner>{ratingFormat(game.rating)}</TileLeftCorner>
+              <TileRightCorner>{currencyFormat(game.price)}</TileRightCorner>
+            </Tile>
+          </a>
+        );
+      })}
+    </TileGrid>
   );
 };
 
