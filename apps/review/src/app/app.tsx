@@ -12,9 +12,10 @@ import {
 
 import { Game } from '@nx-bghoard/api-interfaces';
 
-export const currencyFormat = (amount: number) => '$' + amount.toFixed(2);
-export const ratingFormat = (rating: number) =>
-  (rating === undefined ? '?' : rating.toFixed(0)) + '/5';
+import {
+  currencyFormat,
+  ratingFormat
+} from '@nx-bghoard/review/util-formatters';
 
 export const App = () => {
   const [games, setGames] = useState<Game[]>([]);
