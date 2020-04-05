@@ -5,10 +5,13 @@
   "scripts": {
     "nx": "nx",
     "start": "nx serve",
+    "start:api": "nx serve api",
+    "start:review": "nx serve review",
     "build": "nx build",
     "test": "nx test",
     "lint": "nx workspace-lint && nx lint",
     "e2e": "nx e2e",
+    "e2e:review": "nx e2e review-e2e --watch",
     "affected:apps": "nx affected:apps",
     "affected:libs": "nx affected:libs",
     "affected:build": "nx affected:build",
