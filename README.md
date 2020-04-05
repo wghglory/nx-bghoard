@@ -10,6 +10,12 @@ npx create-nx-workspace nx-bghoard
 ? Default stylesheet format           emotion           [ https://emotion.sh]
 ```
 
+## Create a shared ui-tile react library
+
+```bash
+nx g @nrwl/react:lib ui-tile --directory=review  # create ui-tile lib under review folder
+```
+
 ## Adding capabilities to your workspace
 
 Below are some plugins which you can add to your workspace:

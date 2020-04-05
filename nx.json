@@ -31,6 +31,9 @@
     },
     "api-interfaces": {
       "tags": []
+    },
+    "review-ui-tile": {
+      "tags": []
     }
   }
 }
