@@ -1,16 +1,16 @@
 # NxBghoard
 
-This project was generated using [Nx](https://nx.dev).
+Create the repo:
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="450"></p>
+```
+npx create-nx-workspace nx-bghoard
 
-🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
+? What to create in the new workspace react-express     [a workspace with a full stack application (React + Express)]
+? Application name                    review
+? Default stylesheet format           emotion           [ https://emotion.sh]
+```
 
 ## Adding capabilities to your workspace
-
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
-
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
 
 Below are some plugins which you can add to your workspace:
 
