@@ -37,6 +37,9 @@
     },
     "review-util-formatters": {
       "tags": []
+    },
+    "review-data-access-games": {
+      "tags": []
     }
   }
 }

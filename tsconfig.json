@@ -20,6 +20,9 @@
       "@nx-bghoard/review/ui-tile": ["libs/review/ui-tile/src/index.ts"],
       "@nx-bghoard/review/util-formatters": [
         "libs/review/util-formatters/src/index.ts"
+      ],
+      "@nx-bghoard/review/data-access-games": [
+        "libs/review/data-access-games/src/index.ts"
       ]
     }
   },
