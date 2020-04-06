@@ -15,7 +15,10 @@
             "main": "apps/review/src/main.tsx",
             "polyfills": "apps/review/src/polyfills.ts",
             "tsConfig": "apps/review/tsconfig.app.json",
-            "assets": ["apps/review/src/favicon.ico", "apps/review/src/assets"],
+            "assets": [
+              "apps/review/src/favicon.ico",
+              "apps/review/src/assets"
+            ],
             "styles": [],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
@@ -66,7 +69,10 @@
               "apps/review/tsconfig.app.json",
               "apps/review/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/review/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/review/**"
+            ]
           }
         },
         "test": {
@@ -102,8 +108,13 @@
           "options": {
             "linter": "eslint",
             "config": "apps/review-e2e/.eslintrc",
-            "tsConfig": ["apps/review-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/review-e2e/**"]
+            "tsConfig": [
+              "apps/review-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/review-e2e/**"
+            ]
           }
         }
       }
@@ -121,7 +132,9 @@
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": ["apps/api/src/assets"]
+            "assets": [
+              "apps/api/src/assets"
+            ]
           },
           "configurations": {
             "production": {
@@ -152,7 +165,10 @@
               "apps/api/tsconfig.app.json",
               "apps/api/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/api/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/api/**"
+            ]
           }
         },
         "test": {
@@ -180,7 +196,10 @@
               "libs/api-interfaces/tsconfig.lib.json",
               "libs/api-interfaces/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/api-interfaces/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/api-interfaces/**"
+            ]
           }
         },
         "test": {
@@ -208,7 +227,10 @@
               "libs/review/ui-tile/tsconfig.lib.json",
               "libs/review/ui-tile/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/review/ui-tile/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/review/ui-tile/**"
+            ]
           }
         },
         "test": {
@@ -216,34 +238,6 @@
           "options": {
             "jestConfig": "libs/review/ui-tile/jest.config.js",
             "tsConfig": "libs/review/ui-tile/tsconfig.spec.json",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "review-util-formatters": {
-      "root": "libs/review/util-formatters",
-      "sourceRoot": "libs/review/util-formatters/src",
-      "projectType": "library",
-      "schematics": {},
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:lint",
-          "options": {
-            "linter": "eslint",
-            "config": "libs/review/util-formatters/.eslintrc",
-            "tsConfig": [
-              "libs/review/util-formatters/tsconfig.lib.json",
-              "libs/review/util-formatters/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/review/util-formatters/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/review/util-formatters/jest.config.js",
-            "tsConfig": "libs/review/util-formatters/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }
@@ -295,7 +289,10 @@
               "libs/review/feature-list/tsconfig.lib.json",
               "libs/review/feature-list/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/review/feature-list/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/review/feature-list/**"
+            ]
           }
         },
         "test": {
@@ -323,7 +320,10 @@
               "libs/review/feature-details/tsconfig.lib.json",
               "libs/review/feature-details/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/review/feature-details/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/review/feature-details/**"
+            ]
           }
         },
         "test": {
@@ -356,8 +356,13 @@
             "polyfills": "apps/store/src/polyfills.ts",
             "tsConfig": "apps/store/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/store/src/favicon.ico", "apps/store/src/assets"],
-            "styles": ["apps/store/src/styles.scss"],
+            "assets": [
+              "apps/store/src/favicon.ico",
+              "apps/store/src/assets"
+            ],
+            "styles": [
+              "apps/store/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -415,7 +420,10 @@
               "apps/store/tsconfig.app.json",
               "apps/store/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/store/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/store/**"
+            ]
           }
         },
         "test": {
@@ -450,8 +458,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/store-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/store-e2e/**"]
+            "tsConfig": [
+              "apps/store-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/store-e2e/**"
+            ]
           }
         }
       }
@@ -469,7 +482,10 @@
               "libs/store/feature-list/tsconfig.lib.json",
               "libs/store/feature-list/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/store/feature-list/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/store/feature-list/**"
+            ]
           }
         },
         "test": {
@@ -501,7 +517,10 @@
               "libs/store/feature-details/tsconfig.lib.json",
               "libs/store/feature-details/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/store/feature-details/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/store/feature-details/**"
+            ]
           }
         },
         "test": {
@@ -533,7 +552,10 @@
               "libs/store/feature-cart/tsconfig.lib.json",
               "libs/store/feature-cart/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/store/feature-cart/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/store/feature-cart/**"
+            ]
           }
         },
         "test": {
@@ -565,7 +587,10 @@
               "libs/store/ui-formatters/tsconfig.lib.json",
               "libs/store/ui-formatters/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/store/ui-formatters/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/store/ui-formatters/**"
+            ]
           }
         },
         "test": {
@@ -632,7 +657,10 @@
               "libs/store/data-access-cart/tsconfig.lib.json",
               "libs/store/data-access-cart/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/store/data-access-cart/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/store/data-access-cart/**"
+            ]
           }
         },
         "test": {
@@ -666,7 +694,10 @@
               "libs/shared/util-formatters/tsconfig.lib.json",
               "libs/shared/util-formatters/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/util-formatters/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/util-formatters/**"
+            ]
           }
         },
         "test": {
@@ -755,3 +786,4 @@
   },
   "defaultProject": "review"
 }
+

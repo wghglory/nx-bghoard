@@ -14,7 +14,12 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ]
       }
     }
   },
@@ -24,7 +29,9 @@
     },
     "review-e2e": {
       "tags": [],
-      "implicitDependencies": ["review"]
+      "implicitDependencies": [
+        "review"
+      ]
     },
     "api": {
       "tags": []
@@ -33,9 +40,6 @@
       "tags": []
     },
     "review-ui-tile": {
-      "tags": []
-    },
-    "review-util-formatters": {
       "tags": []
     },
     "review-data-access-games": {
@@ -52,7 +56,9 @@
     },
     "store-e2e": {
       "tags": [],
-      "implicitDependencies": ["store"]
+      "implicitDependencies": [
+        "store"
+      ]
     },
     "store-feature-list": {
       "tags": []

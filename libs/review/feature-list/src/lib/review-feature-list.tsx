@@ -14,7 +14,7 @@ import {
 import {
   currencyFormat,
   ratingFormat
-} from '@nx-bghoard/review/util-formatters';
+} from '@nx-bghoard/shared/util-formatters';
 
 import { useGames } from '@nx-bghoard/review/data-access-games';
 

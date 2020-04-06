@@ -6,7 +6,7 @@ import { useGames } from '@nx-bghoard/review/data-access-games';
 import {
   currencyFormat,
   ratingFormat
-} from '@nx-bghoard/review/util-formatters';
+} from '@nx-bghoard/shared/util-formatters';
 
 export interface ReviewFeatureDetailsProps {
   gameId: string;
