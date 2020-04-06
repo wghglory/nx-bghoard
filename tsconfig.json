@@ -48,7 +48,8 @@
       "@nx-bghoard/shared/util-formatters": [
         "libs/shared/util-formatters/src/index.ts"
       ],
-      "@nx-bghoard/shared/assets": ["libs/shared/assets/src/index.ts"]
+      "@nx-bghoard/shared/assets": ["libs/shared/assets/src/index.ts"],
+      "@nx-bghoard/shared/ui-tile": ["libs/shared/ui-tile/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

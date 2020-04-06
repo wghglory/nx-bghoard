@@ -46,6 +46,12 @@ nx g @nrwl/workspace:lib shared/assets
 
 ```
 
+## Create ui-tile webComponent
+
+```bash
+nx g @nrwl/workspace:lib shared/ui-tile
+```
+
 ## Adding capabilities to your workspace
 
 Below are some plugins which you can add to your workspace:
