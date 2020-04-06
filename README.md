@@ -31,6 +31,12 @@ and then modify `workspace.json schematics @nrwl/angular:library` with `style: s
 
 Last run `tools/create-store-libs.sh`.
 
+## Create shared library that both react and angular app can use it.
+
+```bash
+nx g @nrwl/workspace:lib shared/util-formatters
+```
+
 ## Adding capabilities to your workspace
 
 Below are some plugins which you can add to your workspace:

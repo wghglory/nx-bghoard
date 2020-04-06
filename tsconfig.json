@@ -47,6 +47,9 @@
       ],
       "@nx-bghoard/store/data-access-cart": [
         "libs/store/data-access-cart/src/index.ts"
+      ],
+      "@nx-bghoard/shared/util-formatters": [
+        "libs/shared/util-formatters/src/index.ts"
       ]
     }
   },

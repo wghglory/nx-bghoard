@@ -71,6 +71,9 @@
     },
     "store-data-access-cart": {
       "tags": []
+    },
+    "shared-util-formatters": {
+      "tags": []
     }
   }
 }
