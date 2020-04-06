@@ -1,24 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { APP_BASE_HREF } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
+
+import { StoreFeatureCartModule } from '@nx-bghoard/store/feature-cart';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    StoreFeatureCartModule,
     RouterModule.forRoot(
       [
         {
-          path: 'store-feature-list',
+          path: '',
           loadChildren: () =>
             import('@nx-bghoard/store/feature-list').then(
               module => module.StoreFeatureListModule
             )
         },
         {
-          path: 'store-feature-details',
+          path: '',
           loadChildren: () =>
             import('@nx-bghoard/store/feature-details').then(
               module => module.StoreFeatureDetailsModule
@@ -28,7 +34,12 @@ import { RouterModule } from '@angular/router';
       { initialNavigation: 'enabled' }
     )
   ],
-  providers: [],
+  providers: [
+    {
+      provide: APP_BASE_HREF,
+      useValue: '/store'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
