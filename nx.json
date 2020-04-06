@@ -53,6 +53,24 @@
     "store-e2e": {
       "tags": [],
       "implicitDependencies": ["store"]
+    },
+    "store-feature-list": {
+      "tags": []
+    },
+    "store-feature-details": {
+      "tags": []
+    },
+    "store-feature-cart": {
+      "tags": []
+    },
+    "store-ui-formatters": {
+      "tags": []
+    },
+    "store-data-access-games": {
+      "tags": []
+    },
+    "store-data-access-cart": {
+      "tags": []
     }
   }
 }

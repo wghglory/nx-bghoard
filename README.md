@@ -27,6 +27,10 @@ nx g @nrwl/react:lib feature-details --directory=review
 nx g @nrwl/angular:app store --routing --style=scss
 ```
 
+and then modify `workspace.json schematics @nrwl/angular:library` with `style: scss`.
+
+Last run `tools/create-store-libs.sh`.
+
 ## Adding capabilities to your workspace
 
 Below are some plugins which you can add to your workspace:
