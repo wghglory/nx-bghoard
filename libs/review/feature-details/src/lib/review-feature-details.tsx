@@ -1,19 +1,114 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import styled from '@emotion/styled';
+import { Review } from '@nx-bghoard/api-interfaces';
+import { useGames } from '@nx-bghoard/review/data-access-games';
+import {
+  currencyFormat,
+  ratingFormat
+} from '@nx-bghoard/review/util-formatters';
 
-/* eslint-disable-next-line */
-export interface ReviewFeatureDetailsProps {}
+export interface ReviewFeatureDetailsProps {
+  gameId: string;
+}
 
-const StyledReviewFeatureDetails = styled.div`
-  color: pink;
-`;
+export const ReviewFeatureDetails = ({ gameId }) => {
+  const games = useGames();
+  const game = games.find(g => g.id === gameId);
 
-export const ReviewFeatureDetails = (props: ReviewFeatureDetailsProps) => {
+  const [reviewForm, setReviewForm] = useState<Review>({
+    game: game && game.id,
+    content: '',
+    rating: 0
+  });
+
+  function createReview() {
+    fetch('/api/review/' + (game && game.id), {
+      body: JSON.stringify(reviewForm),
+      headers: {
+        ['Content-Type']: 'application/json'
+      },
+      method: 'POST'
+    }).then(() => {
+      setReviewForm({
+        game: game.id,
+        rating: 0,
+        content: ''
+      });
+    });
+  }
+
+  if (!game) {
+    return null;
+  }
+
   return (
-    <StyledReviewFeatureDetails>
-      <h1>Welcome to review-feature-details component!</h1>
-    </StyledReviewFeatureDetails>
+    <>
+      <img
+        src={game.image}
+        style={{ float: 'right', marginLeft: '1em', maxWidth: '50vw' }}
+      />
+      <Link to={'../'}>All Games</Link>
+      <h2>{game.name}</h2>
+      <p>{game.description}</p>
+      <dl>
+        <dt>Rating:</dt>
+        <dd>{ratingFormat(game.rating)}</dd>
+        <br />
+        <dt>Price:</dt>
+        <dd>{currencyFormat(game.price)}</dd>
+      </dl>
+
+      <form onSubmit={createReview}>
+        <fieldset>
+          <legend>Write a Review</legend>
+          <p>
+            <label>
+              <strong>Rating</strong>
+              <br />
+              <input
+                type="number"
+                name="rating"
+                min="0"
+                max="5"
+                value={reviewForm.rating}
+                onChange={event =>
+                  setReviewForm({ ...reviewForm, rating: +event.target.value })
+                }
+              />
+            </label>
+          </p>
+          <p>
+            <label>
+              <strong>Review</strong>
+              <br />
+              <textarea
+                name="content"
+                style={{ width: '100%' }}
+                value={reviewForm.content}
+                onChange={event =>
+                  setReviewForm({ ...reviewForm, content: event.target.value })
+                }
+              />
+            </label>
+          </p>
+          <button type="submit">Submit Review</button>
+        </fieldset>
+      </form>
+
+      <h3 style={{ clear: 'right' }}>Reviews</h3>
+      {game.reviews.map((review, index) => (
+        <article
+          key={index}
+          style={{ borderBottom: 'solid 1px #ccc', marginLeft: '1em' }}
+        >
+          <p>
+            <strong>{ratingFormat(review.rating)}</strong>
+          </p>
+          <p>{review.content}</p>
+        </article>
+      ))}
+    </>
   );
 };
 

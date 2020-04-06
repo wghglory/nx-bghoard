@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import {
   TileGrid,
@@ -27,8 +28,8 @@ export const ReviewFeatureList = (props: ReviewFeatureListProps) => {
     <TileGrid>
       {games.map(game => {
         return (
-          <a
-            href={'/' + game.id}
+          <Link
+            to={'/' + game.id}
             key={game.id}
             style={{ textDecoration: 'none', color: 'inherit' }}
           >
@@ -42,7 +43,7 @@ export const ReviewFeatureList = (props: ReviewFeatureListProps) => {
               <TileLeftCorner>{ratingFormat(game.rating)}</TileLeftCorner>
               <TileRightCorner>{currencyFormat(game.price)}</TileRightCorner>
             </Tile>
-          </a>
+          </Link>
         );
       })}
     </TileGrid>
