@@ -21,6 +21,12 @@ nx g @nrwl/react:lib feature-list --directory=review
 nx g @nrwl/react:lib feature-details --directory=review
 ```
 
+## Create angular store app
+
+```bash
+nx g @nrwl/angular:app store --routing --style=scss
+```
+
 ## Adding capabilities to your workspace
 
 Below are some plugins which you can add to your workspace:
