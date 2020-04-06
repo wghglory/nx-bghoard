@@ -1,4 +1,4 @@
-<div class="grid">
+<!-- <div class="grid">
   <a *ngFor="let game of (games$ | async)"
     [routerLink]="'/' + game?.id"
     class="grid__tile"
@@ -15,4 +15,25 @@
       {{ game.price | currency }}
     </div>
   </a>
-</div>
+</div> -->
+
+<!-- use web component -->
+
+<bghoard-grid>
+  <a *ngFor="let game of (games$ | async)"
+    [routerLink]="'/' + game?.id"
+    style="text-decoration: none; color: inherit">
+    <bghoard-tile>
+      <bghoard-image-wrapper *ngIf="game.image">
+        <img [src]="game.image" />
+      </bghoard-image-wrapper>
+      <bghoard-tile-title>{{ game.name }}</bghoard-tile-title>
+      <bghoard-tile-left-corner>
+        {{ game.rating | rating }}
+      </bghoard-tile-left-corner>
+      <bghoard-tile-right-corner>
+        {{ game.price | currency }}
+      </bghoard-tile-right-corner>
+    </bghoard-tile>
+  </a>
+</bghoard-grid>

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -14,6 +14,7 @@ import { GameListComponent } from './game-list/game-list.component';
       { path: '', pathMatch: 'full', component: GameListComponent }
     ])
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [GameListComponent]
 })
 export class StoreFeatureListModule {}
