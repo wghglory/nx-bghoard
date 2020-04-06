@@ -80,6 +80,9 @@
     },
     "shared-util-formatters": {
       "tags": []
+    },
+    "shared-assets": {
+      "tags": []
     }
   }
 }

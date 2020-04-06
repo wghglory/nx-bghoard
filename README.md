@@ -35,6 +35,15 @@ Last run `tools/create-store-libs.sh`.
 
 ```bash
 nx g @nrwl/workspace:lib shared/util-formatters
+
+nx g @nrwl/workspace:lib shared/assets
+# Add below into workspace.json for both react and angular section
+# {
+#   "input": "libs/shared/assets/src/lib",
+#   "glob": "*.png",
+#   "output": "assets"
+# }
+
 ```
 
 ## Adding capabilities to your workspace
