@@ -399,7 +399,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "store:build"
+            "browserTarget": "store:build",
+            "proxyConfig": "apps/store/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -786,4 +787,3 @@
   },
   "defaultProject": "review"
 }
-
