@@ -11,7 +11,11 @@
     "build": "nx build",
     "test": "nx test",
     "lint": "nx workspace-lint && nx lint",
+    "lint:store": "nx run store:lint",
     "lint:affected": "nx affected:lint --all",
+    "lint:affected2": "nx affected --target=lint",
+    "doc:store": "nx run store:doc",
+    "doc:affected": "nx affected --target=doc",
     "e2e": "nx e2e",
     "e2e:review": "nx e2e review-e2e --watch",
     "affected:apps": "nx affected:apps",
@@ -94,6 +98,7 @@
     "ts-jest": "25.2.1",
     "ts-node": "~7.0.0",
     "tslint": "~6.0.0",
+    "typedoc": "^0.17.4",
     "typescript": "~3.8.3"
   }
 }

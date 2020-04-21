@@ -66,7 +66,7 @@ export const ReviewFeatureList = (props: ReviewFeatureListProps) => {
               )}
               <bghoard-tile-title>{game.name}</bghoard-tile-title>
               <bghoard-tile-left-corner>
-                {ratingFormat(game.rating, 5)}
+                {ratingFormat(game.rating)}
               </bghoard-tile-left-corner>
               <bghoard-tile-right-corner>
                 {currencyFormat(game.price)}
