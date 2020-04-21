@@ -137,6 +137,13 @@ nx workspace-schematic add-license --name store
 nx workspace-schematic add-documentation --name store
 ```
 
+```bash
+# externalSchematic
+nx g workspace-schematic tagged-library
+
+nx workspace-schematic tagged-library test-library
+```
+
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
