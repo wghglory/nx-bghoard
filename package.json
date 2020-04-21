@@ -29,7 +29,8 @@
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points"
+    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
+    "cowsay": "cowsay"
   },
   "private": true,
   "dependencies": {
@@ -91,6 +92,7 @@
     "@angular/language-service": "^9.1.0",
     "@angular-devkit/build-angular": "0.901.0",
     "codelyzer": "~5.0.1",
-    "jest-preset-angular": "8.1.2"
+    "jest-preset-angular": "8.1.2",
+    "cowsay": "*"
   }
 }
