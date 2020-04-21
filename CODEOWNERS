@@ -1,0 +1,4 @@
+# https://help.github.com/en/articles/about-code-owners
+
+/apps/store @nx-bghoard/store @derek 747776580@qq.com
+/libs/store @nx-bghoard/store @derek 747776580@qq.com
