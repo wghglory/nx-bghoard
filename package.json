@@ -11,6 +11,7 @@
     "build": "nx build",
     "test": "nx test",
     "lint": "nx workspace-lint && nx lint",
+    "lint:affected": "nx affected:lint --all",
     "e2e": "nx e2e",
     "e2e:review": "nx e2e review-e2e --watch",
     "affected:apps": "nx affected:apps",

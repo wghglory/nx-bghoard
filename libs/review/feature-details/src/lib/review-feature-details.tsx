@@ -26,7 +26,7 @@ export const ReviewFeatureDetails = ({ gameId }) => {
     fetch('/api/review/' + (game && game.id), {
       body: JSON.stringify(reviewForm),
       headers: {
-        ['Content-Type']: 'application/json'
+        'Content-Type': 'application/json'
       },
       method: 'POST'
     }).then(() => {
@@ -46,6 +46,7 @@ export const ReviewFeatureDetails = ({ gameId }) => {
     <>
       <img
         src={game.image}
+        alt={game.name}
         style={{ float: 'right', marginLeft: '1em', maxWidth: '50vw' }}
       />
       <Link to={'../'}>All Games</Link>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Game } from '@nx-bghoard/api-interfaces';
 
 export function useGames() {
