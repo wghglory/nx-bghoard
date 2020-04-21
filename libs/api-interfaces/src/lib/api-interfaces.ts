@@ -5,7 +5,13 @@ export interface Game {
   description: string;
   price: number;
   rating?: number;
-  reviews?: Array<Review>;
+  reviews?: Review[];
+}
+
+export interface Test {
+  nums: number[];
+  strings: string[];
+  // comment: boolean[];
 }
 
 export interface Review {
