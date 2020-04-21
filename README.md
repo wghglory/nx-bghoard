@@ -85,6 +85,18 @@ Run `nx g @nrwl/react:lib my-lib` to generate a library.
 
 Libraries are sharable across libraries and applications. They can be imported from `@nx-bghoard/mylib`.
 
+## Publish library
+
+Sometimes you would like to create a library that you would like to use outside of your monorepo. This can be accomplished by using the `--publishable` flag for Angular or React libraries.
+
+We'll create a React library with the name react-publish and give it the --publishable flag.
+
+```bash
+nx g @nrwl/react:lib react-publish --publishable
+```
+
+The --publishable flag added a build task for this library, so we can run `nx build react-publish`. The library has been compiled to the dist folder, and you can see it's been published with Typescript typings and esm5, esm2015 and umd versions of the library. Now when we're ready to publish the library, we can cd to dist/libs/react-publish and then run `npm publish --access public`.
+
 ## Development server
 
 Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
