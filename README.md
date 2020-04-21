@@ -93,6 +93,7 @@ We'll create a React library with the name react-publish and give it the --publi
 
 ```bash
 nx g @nrwl/react:lib react-publish --publishable
+nx g @nrwl/angular:lib angular-publish --publishable
 ```
 
 The --publishable flag added a build task for this library, so we can run `nx build react-publish`. The library has been compiled to the dist folder, and you can see it's been published with Typescript typings and esm5, esm2015 and umd versions of the library. Now when we're ready to publish the library, we can cd to dist/libs/react-publish and then run `npm publish --access public`.

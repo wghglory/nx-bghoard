@@ -50,9 +50,11 @@
     "@angular/router": "^9.1.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.5.4",
+    "tslib": "^1.10.0",
     "zone.js": "^0.10.2"
   },
   "devDependencies": {
+    "@angular-devkit/build-ng-packagr": "~0.901.0",
     "@nrwl/angular": "^9.2.2",
     "@nrwl/cypress": "9.2.2",
     "@nrwl/eslint-plugin-nx": "9.2.2",
@@ -79,6 +81,7 @@
     "eslint-plugin-react": "7.17.0",
     "eslint-plugin-react-hooks": "2.3.0",
     "jest": "25.2.3",
+    "ng-packagr": "^9.0.0",
     "prettier": "1.19.1",
     "ts-jest": "25.2.1",
     "ts-node": "~7.0.0",

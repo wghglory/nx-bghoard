@@ -50,7 +50,8 @@
       ],
       "@nx-bghoard/shared/assets": ["libs/shared/assets/src/index.ts"],
       "@nx-bghoard/shared/ui-tile": ["libs/shared/ui-tile/src/index.ts"],
-      "@nx-bghoard/react-publish": ["libs/react-publish/src/index.ts"]
+      "@nx-bghoard/react-publish": ["libs/react-publish/src/index.ts"],
+      "@nx-bghoard/angular-publish": ["libs/angular-publish/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

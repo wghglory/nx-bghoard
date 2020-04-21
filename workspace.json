@@ -768,6 +768,50 @@
           }
         }
       }
+    },
+    "angular-publish": {
+      "projectType": "library",
+      "root": "libs/angular-publish",
+      "sourceRoot": "libs/angular-publish/src",
+      "prefix": "nx-bghoard",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/angular-publish/tsconfig.lib.json",
+            "project": "libs/angular-publish/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/angular-publish/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/angular-publish/tsconfig.lib.json",
+              "libs/angular-publish/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/angular-publish/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/angular-publish/jest.config.js",
+            "tsConfig": "libs/angular-publish/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/angular-publish/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

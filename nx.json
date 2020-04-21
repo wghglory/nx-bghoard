@@ -146,6 +146,9 @@
     },
     "react-publish": {
       "tags": []
+    },
+    "angular-publish": {
+      "tags": []
     }
   }
 }
