@@ -5,12 +5,12 @@ export interface Game {
   description: string;
   price: number;
   rating?: number;
-  reviews?: Review[];
+  reviews?: Array<Review>;
 }
 
 export interface Test {
-  nums: number[];
-  strings: string[];
+  nums: Array<number>;
+  strings: Array<string>;
   // comment: boolean[];
 }
 

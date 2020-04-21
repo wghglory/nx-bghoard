@@ -1726,6 +1726,13 @@
     yargs "^11.0.0"
     yargs-parser "10.0.0"
 
+"@phenomnomnominal/tsquery@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/@phenomnomnominal/tsquery/-/tsquery-4.0.0.tgz#610e8ac968137e4a0f98c842c919bb8ad0e85718"
+  integrity sha512-s2Yet/MCj9Jh6nR6GfldrUPT6Y+aM1jIAdiKcOKEzmeKALT0Tc7SFIkYP3KvzjzbkKK5W7BiJ3cWy2UOa4ITbw==
+  dependencies:
+    esquery "^1.0.1"
+
 "@rollup/plugin-commonjs@11.0.2":
   version "11.0.2"
   resolved "https://registry.npmjs.org/@rollup/plugin-commonjs/-/plugin-commonjs-11.0.2.tgz#837cc6950752327cb90177b608f0928a4e60b582"
