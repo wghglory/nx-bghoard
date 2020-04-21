@@ -130,9 +130,11 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 
 ```bash
 nx generate workspace-schematic add-license
+nx g workspace-schematic add-documentation
 
 # use: will use add-license schematic to create under store project
 nx workspace-schematic add-license --name store
+nx workspace-schematic add-documentation --name store
 ```
 
 ## Further help
